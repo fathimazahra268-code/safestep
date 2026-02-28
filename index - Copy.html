@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeStep - Pedestrian Safety Smart Map</title>
+
+  <link rel="stylesheet" href="style - Copy.css">
+
+  <!-- Leaflet CSS (for map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+
+  <h1>SafeStep</h1>
+  <h3>Pedestrian Safety Smart Map</h3>
+
+  <!-- LOGIN -->
+  <div id="loginSection">
+    <input type="text" id="username" placeholder="Enter your name"><br>
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard">
+  <h2 id="welcomeText"></h2>
+  <button id="logoutBtn" type="button" onclick="logout()">Logout</button>
+
+  <!-- MAP + MARKERS -->
+  <h3>📍 Safety Map</h3>
+  <div id="map"></div>
+
+    <div class="marker-controls">
+      <select id="markerType">
+        <option value="Unsafe">Unsafe Area</option>
+        <option value="Safe">Safe Area</option>
+      </select>
+
+      <input type="text" id="markerNote" placeholder="Marker note (e.g., no streetlight)">
+      <br>
+      <button onclick="enableMarker()">Add Marker (Click Map)</button>
+    </div>
+
+    <hr>
+
+    <!-- REPORT SECTION -->
+    <h3>Report Complaint</h3>
+    <input type="text" id="location" placeholder="Location"><br>
+    <input type="text" id="issue" placeholder="Issue"><br>
+    <textarea id="description" placeholder="Describe the issue"></textarea><br>
+    <button id="submitReportBtn">Submit</button>
+
+    <h3>Reports</h3>
+    <div id="reportList"></div>
+
+    <hr>
+
+    <!-- SAFE ROUTE SECTION -->
+    <h3>Find Safe Route</h3>
+    <input type="text" id="start" placeholder="Start Location"><br>
+    <input type="text" id="destination" placeholder="Destination"><br>
+    <button id="showRouteBtn">Show Safe Route</button>
+
+    <div id="routeResult"></div>
+
+    <div class="map-box">
+      <p>🗺 Route Preview</p>
+      <div id="mapPreview">Route Preview</div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS (must be BEFORE your script.js) -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Your JS -->
+  <script src="script - Copy.js"></script>
+</body>
+</html>

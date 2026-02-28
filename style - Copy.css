@@ -1,0 +1,86 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f8bbd0, #fce4ec);
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  color: #ad1457;
+  margin-bottom: 6px;
+}
+
+input, textarea, select {
+  width: 260px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ad1457;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #880e4f;
+}
+
+#dashboard {
+  display: none; /* hidden until login */
+  margin-top: 20px;
+}
+
+/* REPORT CARDS */
+.report {
+  background: white;
+  padding: 12px;
+  margin: 10px auto;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* MAP BOX (Route preview) */
+.map-box {
+  background: white;
+  margin: 20px auto;
+  padding: 15px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#mapPreview {
+  height: 150px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #e1f5fe, #b3e5fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #01579b;
+}
+
+/* ===== LEAFLET MAP ===== */
+#map {
+  height: 400px;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Marker controls */
+.marker-controls {
+  width: 90%;
+  margin: 10px auto 25px;
+}
